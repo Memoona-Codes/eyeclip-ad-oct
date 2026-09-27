@@ -9,3 +9,4 @@ Run from the data root (the folder that holds the image folders).
 | 4 | `compute_batch2_fid.py`, `check_batch2_class_correlation.py`, `audit_existing_synthetic.py` | FID, nearest neighbour SSIM and L2, label check (Table 3) |
 | 5 | `batch2_pearsonr_scatter_pairs.py` | Supplementary Figure S1 |
 | 6 | `plot_pixel_histograms.py` | Supplementary Figure S2 |
+| 7 | `fig2_real_vs_synthetic.py` | Figure 2 |
