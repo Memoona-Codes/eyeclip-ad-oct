@@ -1,18 +1,14 @@
-"""Figure 2: real B-scans and batch2 synthetic B-scans (before and after rescaling), 4 per class, random with a fixed seed.
+"""Figure 2: real B-scans (VAE training images) and synthetic B-scans before rescaling, 4 per class, random with a fixed seed.
 Run from the data root:  python fig2_real_vs_synthetic.py"""
 import glob, os, numpy as np, matplotlib
 matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from PIL import Image
 REAL = "OCT_PNG_rebuilt_ADCO_slices/train"
 SYN = "synthetic_dataset_v8_batch2"
-RES = "synthetic_dataset_v8_batch2_rescaled"
 rng = np.random.default_rng(2026)
 pick = lambda d, c: sorted(rng.choice(sorted(glob.glob(f"{d}/{c}/*.png")), 4, replace=False))
 real = {c: pick(REAL, c) for c in ("AD", "CO")}
 syn = {c: pick(SYN, c) for c in ("AD", "CO")}
-res = {c: [os.path.join(RES, c, os.path.basename(p)) for p in syn[c]] for c in ("AD", "CO")}
-for c in ("AD", "CO"):  # rescaled files share names with the unrescaled ones
-    assert all(os.path.exists(p) for p in res[c]), f"rescaled files not found for {c}: {res[c]}"
 rows = [("(a) Real B-scans (VAE training images)", real), ("(b) Synthetic B-scans: VAE latent interpolation within class, before rescaling", syn)]
 fig = plt.figure(figsize=(7.5, 2.55))
 gs = fig.add_gridspec(2, 8, hspace=0.3, wspace=0.05, left=0.01, right=0.99, top=0.9, bottom=0.01)
