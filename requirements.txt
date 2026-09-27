@@ -1,0 +1,14 @@
+clip @ git+https://github.com/openai/CLIP.git@d05afc436d78f1c48dc0dbf8e5980a9d471f35f6
+ftfy==6.3.1
+matplotlib==3.11.1
+matplotlib-inline @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-inline_1778264321245/work
+numpy==2.4.6
+opencv-python==5.0.0.93
+pandas==3.0.5
+pillow==12.3.0
+regex==2026.7.19
+scikit-learn==1.9.0
+scipy==1.17.1
+torch==2.13.0
+torchvision==0.28.0
+tqdm==4.70.0

@@ -1,0 +1,4 @@
+Method A,Method B,both correct,A only,B only,both wrong,discordant,p raw,p Bonferroni,significant (0.05)
+TaskRes+SAM,TaskRes,31,0,0,9,0,1.0000,1.0000,no
+TaskRes+SAM,Nearest Centroid,31,0,0,9,0,1.0000,1.0000,no
+TaskRes,Nearest Centroid,31,0,0,9,0,1.0000,1.0000,no

@@ -1,0 +1,41 @@
+method,preproc,dosage,level,TP,FN,FP,TN
+Nearest Centroid [original pool],clahe,0,slice,133,65,71,123
+Nearest Centroid [original pool],clahe,250,slice,133,65,71,123
+Nearest Centroid [original pool],clahe,500,slice,136,62,71,123
+Nearest Centroid [original pool],clahe,750,slice,136,62,71,123
+Nearest Centroid [original pool],clahe,1000,slice,134,64,72,122
+Nearest Centroid [rescaled pool],clahe,0,slice,133,65,71,123
+Nearest Centroid [rescaled pool],clahe,250,slice,133,65,72,122
+Nearest Centroid [rescaled pool],clahe,500,slice,133,65,72,122
+Nearest Centroid [rescaled pool],clahe,750,slice,133,65,72,122
+Nearest Centroid [rescaled pool],clahe,1000,slice,133,65,72,122
+TaskRes+SAM [original pool],clahe,0,slice,132,66,69,125
+TaskRes+SAM [original pool],clahe,250,slice,130,68,70,124
+TaskRes+SAM [original pool],clahe,500,slice,136,62,70,124
+TaskRes+SAM [original pool],clahe,750,slice,136,62,69,125
+TaskRes+SAM [original pool],clahe,1000,slice,136,62,69,125
+TaskRes+SAM [rescaled pool],clahe,0,slice,132,66,69,125
+TaskRes+SAM [rescaled pool],clahe,250,slice,132,66,70,124
+TaskRes+SAM [rescaled pool],clahe,500,slice,132,66,71,123
+TaskRes+SAM [rescaled pool],clahe,750,slice,132,66,71,123
+TaskRes+SAM [rescaled pool],clahe,1000,slice,132,66,71,123
+Nearest Centroid [original pool],clahe,0,patient,16,4,5,15
+Nearest Centroid [original pool],clahe,250,patient,15,5,5,15
+Nearest Centroid [original pool],clahe,500,patient,15,5,5,15
+Nearest Centroid [original pool],clahe,750,patient,15,5,5,15
+Nearest Centroid [original pool],clahe,1000,patient,15,5,5,15
+Nearest Centroid [rescaled pool],clahe,0,patient,16,4,5,15
+Nearest Centroid [rescaled pool],clahe,250,patient,16,4,5,15
+Nearest Centroid [rescaled pool],clahe,500,patient,16,4,5,15
+Nearest Centroid [rescaled pool],clahe,750,patient,16,4,5,15
+Nearest Centroid [rescaled pool],clahe,1000,patient,16,4,5,15
+TaskRes+SAM [original pool],clahe,0,patient,16,4,5,15
+TaskRes+SAM [original pool],clahe,250,patient,15,5,5,15
+TaskRes+SAM [original pool],clahe,500,patient,15,5,5,15
+TaskRes+SAM [original pool],clahe,750,patient,15,5,5,15
+TaskRes+SAM [original pool],clahe,1000,patient,15,5,5,15
+TaskRes+SAM [rescaled pool],clahe,0,patient,16,4,5,15
+TaskRes+SAM [rescaled pool],clahe,250,patient,16,4,5,15
+TaskRes+SAM [rescaled pool],clahe,500,patient,16,4,5,15
+TaskRes+SAM [rescaled pool],clahe,750,patient,16,4,5,15
+TaskRes+SAM [rescaled pool],clahe,1000,patient,16,4,5,15

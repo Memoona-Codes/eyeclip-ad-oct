@@ -1,0 +1,121 @@
+method,preproc,dosage,level,TP,FN,FP,TN
+CLIP-Adapter,clahe,0,slice,125,73,65,129
+CLIP-Adapter,clahe,500,slice,148,50,83,111
+CLIP-Adapter,clahe,1000,slice,185,13,160,34
+CLIP-Adapter,raw,0,slice,129,69,68,126
+CLIP-Adapter,raw,500,slice,134,64,79,115
+CLIP-Adapter,raw,1000,slice,132,66,87,107
+CoOp,clahe,0,slice,128,70,68,126
+CoOp,clahe,500,slice,133,65,72,122
+CoOp,clahe,1000,slice,133,65,70,124
+CoOp,raw,0,slice,129,69,71,123
+CoOp,raw,500,slice,132,66,74,120
+CoOp,raw,1000,slice,132,66,75,119
+Nearest Centroid,clahe,0,slice,133,65,71,123
+Nearest Centroid,clahe,500,slice,133,65,72,122
+Nearest Centroid,clahe,1000,slice,133,65,72,122
+Nearest Centroid,raw,0,slice,130,68,75,119
+Nearest Centroid,raw,500,slice,132,66,75,119
+Nearest Centroid,raw,1000,slice,133,65,76,118
+Proto-Adapter,clahe,0,slice,134,64,71,123
+Proto-Adapter,clahe,500,slice,133,65,72,122
+Proto-Adapter,clahe,1000,slice,133,65,72,122
+Proto-Adapter,raw,0,slice,130,68,73,121
+Proto-Adapter,raw,500,slice,132,66,76,118
+Proto-Adapter,raw,1000,slice,132,66,76,118
+TaskRes,clahe,0,slice,130,68,69,125
+TaskRes,clahe,500,slice,132,66,71,123
+TaskRes,clahe,1000,slice,132,66,71,123
+TaskRes,raw,0,slice,134,64,75,119
+TaskRes,raw,500,slice,133,65,73,121
+TaskRes,raw,1000,slice,132,66,74,120
+TaskRes+SAM,clahe,0,slice,132,66,69,125
+TaskRes+SAM,clahe,500,slice,132,66,71,123
+TaskRes+SAM,clahe,1000,slice,132,66,71,123
+TaskRes+SAM,raw,0,slice,133,65,75,119
+TaskRes+SAM,raw,500,slice,131,67,73,121
+TaskRes+SAM,raw,1000,slice,132,66,74,120
+Tip-Adapter,clahe,0,slice,129,69,70,124
+Tip-Adapter,clahe,500,slice,132,66,70,124
+Tip-Adapter,clahe,1000,slice,132,66,70,124
+Tip-Adapter,raw,0,slice,134,64,74,120
+Tip-Adapter,raw,500,slice,133,65,75,119
+Tip-Adapter,raw,1000,slice,133,65,75,119
+Tip-Adapter-F,clahe,0,slice,132,66,63,131
+Tip-Adapter-F,clahe,500,slice,131,67,64,130
+Tip-Adapter-F,clahe,1000,slice,141,57,68,126
+Tip-Adapter-F,raw,0,slice,133,65,73,121
+Tip-Adapter-F,raw,500,slice,133,65,73,121
+Tip-Adapter-F,raw,1000,slice,131,67,73,121
+Tip-Adapter-F+SAM,clahe,0,slice,126,72,66,128
+Tip-Adapter-F+SAM,clahe,500,slice,132,66,63,131
+Tip-Adapter-F+SAM,clahe,1000,slice,130,68,63,131
+Tip-Adapter-F+SAM,raw,0,slice,141,57,94,100
+Tip-Adapter-F+SAM,raw,500,slice,135,63,73,121
+Tip-Adapter-F+SAM,raw,1000,slice,133,65,73,121
+Zero-Shot,clahe,0,slice,130,68,64,130
+Zero-Shot,clahe,500,slice,130,68,64,130
+Zero-Shot,clahe,1000,slice,130,68,64,130
+Zero-Shot,raw,0,slice,132,66,72,122
+Zero-Shot,raw,500,slice,132,66,72,122
+Zero-Shot,raw,1000,slice,132,66,72,122
+CLIP-Adapter,clahe,0,patient,16,4,4,16
+CLIP-Adapter,clahe,500,patient,16,4,8,12
+CLIP-Adapter,clahe,1000,patient,16,4,12,8
+CLIP-Adapter,raw,0,patient,16,4,5,15
+CLIP-Adapter,raw,500,patient,15,5,3,17
+CLIP-Adapter,raw,1000,patient,14,6,4,16
+CoOp,clahe,0,patient,16,4,5,15
+CoOp,clahe,500,patient,16,4,5,15
+CoOp,clahe,1000,patient,16,4,5,15
+CoOp,raw,0,patient,14,6,5,15
+CoOp,raw,500,patient,15,5,4,16
+CoOp,raw,1000,patient,15,5,4,16
+Nearest Centroid,clahe,0,patient,16,4,5,15
+Nearest Centroid,clahe,500,patient,16,4,5,15
+Nearest Centroid,clahe,1000,patient,16,4,5,15
+Nearest Centroid,raw,0,patient,15,5,6,14
+Nearest Centroid,raw,500,patient,13,7,4,16
+Nearest Centroid,raw,1000,patient,13,7,4,16
+Proto-Adapter,clahe,0,patient,16,4,4,16
+Proto-Adapter,clahe,500,patient,16,4,5,15
+Proto-Adapter,clahe,1000,patient,16,4,5,15
+Proto-Adapter,raw,0,patient,15,5,6,14
+Proto-Adapter,raw,500,patient,13,7,4,16
+Proto-Adapter,raw,1000,patient,13,7,4,16
+TaskRes,clahe,0,patient,16,4,5,15
+TaskRes,clahe,500,patient,16,4,5,15
+TaskRes,clahe,1000,patient,16,4,5,15
+TaskRes,raw,0,patient,16,4,4,16
+TaskRes,raw,500,patient,15,5,3,17
+TaskRes,raw,1000,patient,15,5,3,17
+TaskRes+SAM,clahe,0,patient,16,4,5,15
+TaskRes+SAM,clahe,500,patient,16,4,5,15
+TaskRes+SAM,clahe,1000,patient,16,4,5,15
+TaskRes+SAM,raw,0,patient,15,5,4,16
+TaskRes+SAM,raw,500,patient,15,5,3,17
+TaskRes+SAM,raw,1000,patient,15,5,3,17
+Tip-Adapter,clahe,0,patient,16,4,5,15
+Tip-Adapter,clahe,500,patient,16,4,5,15
+Tip-Adapter,clahe,1000,patient,16,4,5,15
+Tip-Adapter,raw,0,patient,16,4,5,15
+Tip-Adapter,raw,500,patient,15,5,4,16
+Tip-Adapter,raw,1000,patient,15,5,4,16
+Tip-Adapter-F,clahe,0,patient,14,6,3,17
+Tip-Adapter-F,clahe,500,patient,14,6,3,17
+Tip-Adapter-F,clahe,1000,patient,16,4,5,15
+Tip-Adapter-F,raw,0,patient,15,5,6,14
+Tip-Adapter-F,raw,500,patient,15,5,5,15
+Tip-Adapter-F,raw,1000,patient,15,5,6,14
+Tip-Adapter-F+SAM,clahe,0,patient,14,6,3,17
+Tip-Adapter-F+SAM,clahe,500,patient,14,6,3,17
+Tip-Adapter-F+SAM,clahe,1000,patient,14,6,3,17
+Tip-Adapter-F+SAM,raw,0,patient,16,4,7,13
+Tip-Adapter-F+SAM,raw,500,patient,15,5,6,14
+Tip-Adapter-F+SAM,raw,1000,patient,15,5,6,14
+Zero-Shot,clahe,0,patient,14,6,3,17
+Zero-Shot,clahe,500,patient,14,6,3,17
+Zero-Shot,clahe,1000,patient,14,6,3,17
+Zero-Shot,raw,0,patient,15,5,6,14
+Zero-Shot,raw,500,patient,15,5,6,14
+Zero-Shot,raw,1000,patient,15,5,6,14

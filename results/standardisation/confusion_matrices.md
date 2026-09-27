@@ -1,0 +1,4 @@
+| method | preproc | level | TP | FN | FP | TN |
+|---|---|---|---|---|---|---|
+| TaskRes+SAM [rescaled pool] | clahe | slice | 132 | 66 | 69 | 125 |
+| TaskRes+SAM [rescaled pool] | clahe | patient | 16 | 4 | 5 | 15 |
