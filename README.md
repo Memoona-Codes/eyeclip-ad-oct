@@ -19,8 +19,7 @@ Code, patient disjoint split definitions and prediction files for the manuscript
 | `predictions_dosage_batch2.csv` | Standardisation study, real only rule | Table 7; Figure 4 |
 | `predictions_dosage_batch2_pooled.csv` | Standardisation study, pooled rule | Table 7; Figure 4 |
 
-Columns: method, preproc, dosage, split, seed, slice_id, patient_id, y_true (1 = AD), score, threshold, patient_threshold.
-
+Columns: run_time, method, preproc, dosage, split, seed, slice_id, patient_id, condition (DARK/LIGHT), y_true (1 = AD), score (standardised), threshold, patient_threshold.
 ## Paper items and scripts
 | Paper item | Script |
 |---|---|
