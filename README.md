@@ -52,5 +52,6 @@ Experiments ran on one NVIDIA A100 (40 GB). `requirements.txt` lists the main pa
 ## Note on the synthetic images
 The VAE was trained on images from all 28 patients, and the synthetic source images included every validation patient.
 The augmentation results are therefore an optimistic test.
+Intensity rescaling used the real statistics of one fixed training set (OCT_PNG_rebuilt_ADCO_slices_cropped_CLEAN_SPLIT/train, 197 B-scans from 20 patients), which includes 5 to 7 of the 8 validation patients of each split (see data/checks.md).
 
 ## Citation
