@@ -54,4 +54,3 @@ The VAE was trained on images from all 28 patients, and the synthetic source ima
 The augmentation results are therefore an optimistic test.
 
 ## Citation
-[confirm: add the paper reference and Zenodo DOI after acceptance]
