@@ -45,7 +45,7 @@ Columns: run_time, method, preproc, dosage, split, seed, slice_id, patient_id, c
 
 ## Rerun the experiments (GPU)
 1. Download the OCT images from Dryad (https://doi.org/10.5061/dryad.msbcc2ftc, CC0) and use the raw acquisitions (275 B-scans, 14 AD, 14 CO). Arrange them by the files listed in `data/splits/`.
-2. Obtain the EyeCLIP ViT-B/32 weights from the EyeCLIP authors. Images and weights are not redistributed here.
+2. Obtain the EyeCLIP ViT-B/32 weights (image and text encoders) from the EyeCLIP authors. Images and weights are not redistributed here.
 3. Run the scripts in `1_synthetic_generation/` from the data root, then the scripts in `2_eyeclip_adaptation/` from inside that folder.
 Experiments ran on one NVIDIA A100 (40 GB). `requirements.txt` lists the main packages; `requirements_full.txt` is the full environment.
 
