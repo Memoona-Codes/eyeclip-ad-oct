@@ -1,0 +1,19 @@
+disease,n_images,n_patients,method,auc_raw,auc_clahe,gain,ci_low,ci_high,significant
+AMD,1231,421,Nearest Centroid,0.746,0.826,0.080,0.059,0.102,True
+AMD,1231,421,TaskRes+SAM,0.355,0.765,0.410,0.345,0.470,True
+AMD,1231,421,Zero-Shot,0.721,0.859,0.138,0.111,0.164,True
+DME,147,107,Nearest Centroid,0.718,0.834,0.116,0.081,0.154,True
+DME,147,107,TaskRes+SAM,0.528,0.849,0.321,0.220,0.422,True
+DME,147,107,Zero-Shot,0.597,0.852,0.256,0.198,0.314,True
+ERM,155,71,Nearest Centroid,0.694,0.803,0.109,0.059,0.169,True
+ERM,155,71,TaskRes+SAM,0.428,0.795,0.367,0.269,0.462,True
+ERM,155,71,Zero-Shot,0.585,0.810,0.225,0.168,0.282,True
+RAO,22,11,Nearest Centroid,0.740,0.826,0.086,0.045,0.133,True
+RAO,22,11,TaskRes+SAM,0.321,0.863,0.541,0.299,0.722,True
+RAO,22,11,Zero-Shot,0.792,0.861,0.069,0.012,0.136,True
+RVO,101,50,Nearest Centroid,0.605,0.807,0.202,0.139,0.269,True
+RVO,101,50,TaskRes+SAM,0.523,0.810,0.287,0.165,0.401,True
+RVO,101,50,Zero-Shot,0.457,0.747,0.291,0.211,0.378,True
+VID,76,51,Nearest Centroid,0.497,0.607,0.110,0.047,0.173,True
+VID,76,51,TaskRes+SAM,0.606,0.615,0.009,-0.115,0.132,False
+VID,76,51,Zero-Shot,0.434,0.705,0.271,0.188,0.349,True

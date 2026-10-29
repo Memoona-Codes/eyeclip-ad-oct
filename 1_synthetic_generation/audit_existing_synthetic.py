@@ -235,7 +235,16 @@ def main():
     ap.add_argument("--no-fid", action="store_true")
     ap.add_argument("--quick", action="store_true", help="100 synthetic images per pool/class, 200 diversity pairs")
     ap.add_argument("--out", default="synth_audit")
+    ap.add_argument("--leakfree", action="store_true",
+                    help="audit the per-split leakage-free VAE pools (exp_H) instead of the paper's pools")
+    ap.add_argument("--lf-name", default="synthetic_leakfree",
+                    help="pool prefix used with --leakfree (synthetic_leakfree_v2 for exp_H2)")
     a = ap.parse_args()
+    if a.leakfree:
+        POOLS["original"] = a.lf_name + "_split{k}"
+        POOLS["rescaled"] = a.lf_name + "_split{k}_rescaled"
+        if a.out == "synth_audit":
+            a.out = "synth_audit_" + a.lf_name.replace("synthetic_", "")
     os.makedirs(a.out, exist_ok=True)
     n_syn = 100 if a.quick else 500
     n_pairs = 200 if a.quick else 1000

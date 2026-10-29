@@ -1,0 +1,4 @@
+method,auc_raw,auc_clahe,diff,ci_low,ci_high
+Zero-Shot,0.6713,0.8406,0.1693,0.1430,0.1965
+Nearest Centroid,0.7200,0.8140,0.0940,0.0730,0.1144
+TaskRes+SAM,0.3967,0.7721,0.3754,0.3183,0.4317

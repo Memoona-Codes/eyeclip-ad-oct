@@ -1,0 +1,6 @@
+| method | preproc | level | TP | FN | FP | TN |
+|---|---|---|---|---|---|---|
+| TaskRes+SAM | clahe | slice | 132 | 66 | 69 | 125 |
+| TaskRes+SAM | clahe | patient | 16 | 4 | 5 | 15 |
+| TaskRes+SAM | raw | slice | 133 | 65 | 75 | 119 |
+| TaskRes+SAM | raw | patient | 15 | 5 | 4 | 16 |

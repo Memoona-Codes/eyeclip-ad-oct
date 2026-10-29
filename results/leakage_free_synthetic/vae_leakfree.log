@@ -1,0 +1,76 @@
+== split 0: VAE trained on 197 images from 20 training patients (8 validation patients excluded)
+  split 0 epoch   1/100 val loss 0.4441
+  split 0 epoch  10/100 val loss 0.2090
+  split 0 epoch  20/100 val loss 0.1448
+  split 0 epoch  30/100 val loss 0.1312
+  split 0 epoch  40/100 val loss 0.1259
+  split 0 epoch  50/100 val loss 0.1217
+  split 0 epoch  60/100 val loss 0.1186
+  split 0 epoch  70/100 val loss 0.1173
+  split 0 epoch  80/100 val loss 0.1159
+  split 0 epoch  90/100 val loss 0.1149
+  split 0 epoch 100/100 val loss 0.1162
+ split cls   n  nn_ssim  nn_ssim_sd  nn_l2  label_same_class  flagged
+     0  AD 500    0.848       0.090 14.554             0.950        0
+     0  CO 500    0.888       0.035 12.025             0.976        0
+== split 1: VAE trained on 197 images from 20 training patients (8 validation patients excluded)
+  split 1 epoch   1/100 val loss 0.4651
+  split 1 epoch  10/100 val loss 0.1635
+  split 1 epoch  20/100 val loss 0.1439
+  split 1 epoch  30/100 val loss 0.1339
+  split 1 epoch  40/100 val loss 0.1288
+  split 1 epoch  50/100 val loss 0.1299
+  split 1 epoch  60/100 val loss 0.1237
+  split 1 epoch  70/100 val loss 0.1236
+  split 1 epoch  80/100 val loss 0.1236
+  split 1 epoch  90/100 val loss 0.1212
+  split 1 epoch 100/100 val loss 0.1214
+ split cls   n  nn_ssim  nn_ssim_sd  nn_l2  label_same_class  flagged
+     1  AD 500    0.853       0.089 13.239             0.920        0
+     1  CO 500    0.897       0.032 11.021             0.972        0
+== split 2: VAE trained on 196 images from 20 training patients (8 validation patients excluded)
+  split 2 epoch   1/100 val loss 0.4589
+  split 2 epoch  10/100 val loss 0.1424
+  split 2 epoch  20/100 val loss 0.1237
+  split 2 epoch  30/100 val loss 0.1171
+  split 2 epoch  40/100 val loss 0.1157
+  split 2 epoch  50/100 val loss 0.1144
+  split 2 epoch  60/100 val loss 0.1127
+  split 2 epoch  70/100 val loss 0.1132
+  split 2 epoch  80/100 val loss 0.1121
+  split 2 epoch  90/100 val loss 0.1118
+  split 2 epoch 100/100 val loss 0.1114
+ split cls   n  nn_ssim  nn_ssim_sd  nn_l2  label_same_class  flagged
+     2  AD 500    0.866       0.050 13.761             0.924        0
+     2  CO 500    0.893       0.038 12.065             0.980        0
+== split 3: VAE trained on 195 images from 20 training patients (8 validation patients excluded)
+  split 3 epoch   1/100 val loss 0.4076
+  split 3 epoch  10/100 val loss 0.1999
+  split 3 epoch  20/100 val loss 0.1517
+  split 3 epoch  30/100 val loss 0.1340
+  split 3 epoch  40/100 val loss 0.1268
+  split 3 epoch  50/100 val loss 0.1242
+  split 3 epoch  60/100 val loss 0.1199
+  split 3 epoch  70/100 val loss 0.1193
+  split 3 epoch  80/100 val loss 0.1192
+  split 3 epoch  90/100 val loss 0.1181
+  split 3 epoch 100/100 val loss 0.1181
+ split cls   n  nn_ssim  nn_ssim_sd  nn_l2  label_same_class  flagged
+     3  AD 500    0.851       0.088 13.486             0.924        0
+     3  CO 500    0.895       0.032 11.507             0.980        0
+== split 4: VAE trained on 198 images from 20 training patients (8 validation patients excluded)
+  split 4 epoch   1/100 val loss 0.4481
+  split 4 epoch  10/100 val loss 0.1507
+  split 4 epoch  20/100 val loss 0.1346
+  split 4 epoch  30/100 val loss 0.1295
+  split 4 epoch  40/100 val loss 0.1260
+  split 4 epoch  50/100 val loss 0.1221
+  split 4 epoch  60/100 val loss 0.1229
+  split 4 epoch  70/100 val loss 0.1217
+  split 4 epoch  80/100 val loss 0.1219
+  split 4 epoch  90/100 val loss 0.1207
+  split 4 epoch 100/100 val loss 0.1209
+ split cls   n  nn_ssim  nn_ssim_sd  nn_l2  label_same_class  flagged
+     4  AD 500    0.843       0.081 14.677             0.890        0
+     4  CO 500    0.891       0.032 11.405             0.974        0
+DONE

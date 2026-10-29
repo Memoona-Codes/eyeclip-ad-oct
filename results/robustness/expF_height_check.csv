@@ -1,0 +1,9 @@
+check,value
+n_images,275
+AD_mean_height_px,101.3
+CO_mean_height_px,97.8
+slice_AUC_of_height_alone,0.649
+patients_with_any_crop_over_110px,AD414 (4 imgs) AD727 (6) AD807 (6) CO015 (1)
+best_slice_AUC_CLAHE_all_patients,0.768 (TaskRes+SAM)
+best_slice_AUC_CLAHE_excluding_4_patients,0.774 (TaskRes+SAM)
+CLAHE_gain_range_excluding_4_patients,0.032 to 0.049 (all 10 methods positive)

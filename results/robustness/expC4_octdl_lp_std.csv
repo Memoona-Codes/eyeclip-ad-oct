@@ -1,0 +1,5 @@
+method,auc_raw,auc_clahe,diff,ci_low,ci_high,significant,note
+Zero-Shot,0.6713,0.8406,0.1693,0.1430,0.1965,True,reproduced
+Nearest Centroid,0.7200,0.8140,0.0940,0.0730,0.1144,True,reproduced
+Linear Probe (std, tuned C),0.9736,0.9629,-0.0107,-0.0186,-0.0033,True,new valid probe
+TaskRes+SAM,0.3967,0.7721,0.3754,0.3183,0.4317,True,reproduced
