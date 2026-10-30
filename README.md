@@ -1,13 +1,13 @@
 # LEAD: a leakage-free framework for adapting retinal foundation models to Alzheimer's disease detection from OCT
 
 Code, patient-disjoint split definitions, prediction files and result tables for the LEAD manuscript.
-The main and synthetic-augmentation results (Tables 2, 5 and 6, Figures 3 and 5) can be recomputed from the
-prediction files in `data/predictions/` without a GPU. Result tables for the robustness analyses are in `results/robustness/`.
+Every result in the paper can be recomputed from the prediction and score files in `data/predictions/` without a GPU.
+Result tables for the robustness analyses are also given in `results/robustness/`.
 
 ## Folders
 | Folder | Contents |
 |---|---|
-| `1_synthetic_generation/` | VAE training, synthetic image generation, intensity rescaling, quality audit, and the leakage-free per-split generators |
+| `1_synthetic_generation/` | VAE code (`models/`, `losses/`, `utils/`), VAE training, synthetic image generation, intensity rescaling, quality audit, and the leakage-free per-split generators |
 | `2_eyeclip_adaptation/` | EyeCLIP features, CLAHE, the ten adaptation methods, threshold choice, real-anchored score standardisation, slice and patient level evaluation |
 | `3_robustness_generalisation/` | CLAHE settings, all-patient cross-validation, second dataset (OCTDL), linear probe, second encoder (RETFound), label efficiency, set-up checks |
 | `data/splits/` | `split_seed0.csv` to `split_seed4.csv`: split_seed, set (train/val), class (AD/CO), patient_id, file. `all_splits.csv` joins them |
@@ -28,6 +28,11 @@ prediction files in `data/predictions/` without a GPU. Result tables for the rob
 | `predictions_synth_batch2.csv` | Real + 500 or 1,000 images from the original generator (trained on all 28 patients) | Table 5 (original pool), Supplementary Table S3 |
 | `predictions_synth_leakfree_nearcopy.csv` | Real + 500 or 1,000 images from per-split generators, original sampling (near-copy pool) | Table 5 (near-copy pool) |
 | `predictions_synth_leakfree_newimage.csv` | Real + 500 or 1,000 images from per-split generators, new-image sampling | Table 5 (new-image pool) |
+| `predictions_grouped_cv.csv` | All 28 patients, 7 folds × 5 repeats, 10 methods, raw and CLAHE | Table 2 (right) |
+| `predictions_linear_probe.csv` | Linear probe on the five splits | Tables 2 and 3 |
+| `predictions_clahe_sensitivity.csv` | Five CLAHE settings, 10 methods | Section 3.2 |
+| `octdl_scores.npz` | OCTDL out-of-fold scores, EyeCLIP heads, raw and CLAHE | Table 3 (OCTDL) |
+| `retfound_octdl_scores_native.npz`, `retfound_bissig_per_split_native.csv` | RETFound scores and per-split AUC | Table 3 (RETFound) |
 | `predictions_dosage_batch2.csv` | Standardisation study, real-anchored rule | Table 6, Figure 5 |
 | `predictions_dosage_batch2_pooled.csv` | Standardisation study, pooled rule | Table 6, Figure 5 |
 
@@ -44,7 +49,7 @@ Columns: run_time, method, preproc, dosage, split, seed, slice_id, patient_id, c
 | Table 3, RETFound rows | `3_robustness_generalisation/exp_E_retfound_clahe.py` |
 | Figure 4 (label efficiency) | `3_robustness_generalisation/exp_G_label_efficiency.py` |
 | CLAHE settings (Section 3.2) | `3_robustness_generalisation/exp_A_clahe_sensitivity.py`, `exp_summary.py` |
-| Crop-height check (Section 3.2) | result in `results/robustness/expF_height_check.csv` |
+| Crop-height check (Section 3.2) | `3_robustness_generalisation/exp_F_crop_height.py` |
 | Supplementary Table S1 (VAE) | `1_synthetic_generation/train_v8_vae.py` |
 | Table 4 (quality audit) | `compute_batch2_fid.py`, `check_batch2_class_correlation.py`, `audit_existing_synthetic.py` |
 | Supplementary Figure S1 | `1_synthetic_generation/fig2_real_vs_synthetic.py`, `batch2_pearsonr_scatter_pairs.py` |
