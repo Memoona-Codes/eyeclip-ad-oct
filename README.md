@@ -1,7 +1,8 @@
 # LEAD: a leakage-free framework for adapting retinal foundation models to Alzheimer's disease detection from OCT
 
 Code, patient-disjoint split definitions, prediction files and result tables for the LEAD manuscript.
-Every result in the paper can be recomputed from the prediction files in `data/predictions/` without a GPU.
+The main and synthetic-augmentation results (Tables 2, 5 and 6, Figures 3 and 5) can be recomputed from the
+prediction files in `data/predictions/` without a GPU. Result tables for the robustness analyses are in `results/robustness/`.
 
 ## Folders
 | Folder | Contents |
@@ -50,6 +51,15 @@ Columns: run_time, method, preproc, dosage, split, seed, slice_id, patient_id, c
 | Table 5, original pool; Supplementary Table S3 | `2_eyeclip_adaptation/final_synthetic_all_methods.py`, then `analyze_predictions.py` |
 | Table 5, leakage-free pools | `1_synthetic_generation/exp_H_vae_per_split.py` (near-copy), `exp_H2_regenerate.py` (new-image), `audit_existing_synthetic.py --leakfree`, then `final_synthetic_all_methods.py --pool ...` |
 | Table 6, Figure 5 | `final_synthetic_dosage.py` (real-anchored), `final_synthetic_dosage_pooled_rule.py` (pooled), `plot_standardisation.py` |
+
+## Synthetic pool used by each prediction file
+`final_synthetic_all_methods.py` takes the pool folder with `--pool` (`{split}` is filled in for per-split pools):
+
+    # original pool (Table 5, Supplementary Table S3)
+    python final_synthetic_all_methods.py --pool "~/Gem Synthetic code/synthetic_dataset_v8_batch2_rescaled" --out predictions_synth_batch2.csv
+    # leakage-free pools (Table 5)
+    python final_synthetic_all_methods.py --pool "~/Gem Synthetic code/synthetic_leakfree_split{split}_rescaled" --out predictions_synth_leakfree_nearcopy.csv
+    python final_synthetic_all_methods.py --pool "~/Gem Synthetic code/synthetic_leakfree_v2_split{split}_rescaled" --out predictions_synth_leakfree_newimage.csv
 
 ## Reproduce the tables from the prediction files (no GPU needed)
     cd 2_eyeclip_adaptation

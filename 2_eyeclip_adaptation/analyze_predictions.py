@@ -28,8 +28,9 @@ Statistics used
 * 95% CI: patient-cluster bootstrap. Within each split, validation patients are resampled with
   replacement (stratified by class); all seeds of that split use the same resample; the metric is
   averaged over all runs. Repeated n_boot times; percentile interval.
-* Raw vs CLAHE: paired over matched (split, seed) runs.
-  - corrected resampled t-test (Nadeau & Bengio 2003): var * (1/n + n_val/n_train), df = n-1
+* Raw vs CLAHE: paired over matched (split, seed) runs, summarised per split.
+  - corrected resampled t-test (Nadeau & Bengio 2003) on the S per-split mean differences:
+    var * (1/S + n_val/n_train), df = S-1, with n_train = training patients per split (default 20)
   - Wilcoxon signed-rank on the 5 per-split means (smallest possible two-sided p = 0.0625)
 * McNemar: exact binomial on discordant patients, pooled over splits. Each method's patient call
   is the majority over model seeds (ties -> seed-mean score vs seed-mean threshold).
@@ -239,6 +240,9 @@ def summary_table(pr, level, metrics, ci):
     return t
 
 
+N_TRAIN_PATIENTS = 20
+
+
 def corrected_ttest(d, n_val, n_train):
     d = np.asarray(d, float); n = len(d)
     if n < 2 or np.var(d, ddof=1) == 0:
@@ -252,7 +256,7 @@ def corrected_ttest(d, n_val, n_train):
 def raw_vs_clahe(pr, df):
     rows = []
     n_val = df.groupby("split").patient_id.nunique().mean()
-    n_train = df.patient_id.nunique() - n_val
+    n_train = N_TRAIN_PATIENTS  # training patients per split; the prediction files hold validation patients only
     sub = pr[pr.dosage == 0]
     for (method, level), g in sub.groupby(["method", "level"]):
         a = g[g.preproc == "raw"].set_index(["split", "seed"])["AUC"]
@@ -261,8 +265,8 @@ def raw_vs_clahe(pr, df):
         if len(idx) < 2:
             continue
         d = (b.loc[idx] - a.loc[idx]).values
-        t, p = corrected_ttest(d, n_val, n_train)
         per_split = (b.loc[idx] - a.loc[idx]).groupby(level="split").mean()
+        t, p = corrected_ttest(per_split.values, n_val, n_train)   # the split is the unit (S = 5)
         try:
             wp = stats.wilcoxon(per_split.values).pvalue if len(per_split) >= 2 and np.any(per_split != 0) else np.nan
         except ValueError:

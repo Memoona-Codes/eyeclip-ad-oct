@@ -1,0 +1,32 @@
+\begin{table}[t]
+\centering
+\caption{Raw vs CLAHE, paired over matched (split, seed) runs}
+\label{tab:table_raw_vs_clahe}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllllllll}
+\toprule
+method & level & AUC raw & AUC CLAHE & $\Delta$AUC & splits improved & corrected t p & Wilcoxon p (splits) & matched runs \\
+\midrule
+CLIP-Adapter & slice & 0.699 $\pm$ 0.106 & 0.746 $\pm$ 0.073 & +0.0473 & 5/5 & 0.0713 & 0.0625 & 25 \\
+Tip-Adapter-F & slice & 0.716 $\pm$ 0.074 & 0.761 $\pm$ 0.062 & +0.0451 & 5/5 & 0.0868 & 0.0625 & 25 \\
+Zero-Shot & slice & 0.717 $\pm$ 0.082 & 0.761 $\pm$ 0.068 & +0.0448 & 5/5 & 0.0842 & 0.0625 & 5 \\
+CoOp & slice & 0.713 $\pm$ 0.066 & 0.752 $\pm$ 0.060 & +0.0390 & 5/5 & 0.2176 & 0.0625 & 25 \\
+Nearest Centroid & slice & 0.732 $\pm$ 0.065 & 0.766 $\pm$ 0.061 & +0.0334 & 5/5 & 0.1741 & 0.0625 & 5 \\
+TaskRes+SAM & slice & 0.736 $\pm$ 0.059 & 0.768 $\pm$ 0.053 & +0.0316 & 5/5 & 0.2670 & 0.0625 & 25 \\
+TaskRes & slice & 0.735 $\pm$ 0.058 & 0.767 $\pm$ 0.053 & +0.0315 & 5/5 & 0.2803 & 0.0625 & 25 \\
+Proto-Adapter & slice & 0.734 $\pm$ 0.061 & 0.765 $\pm$ 0.056 & +0.0311 & 5/5 & 0.1997 & 0.0625 & 25 \\
+Tip-Adapter & slice & 0.736 $\pm$ 0.065 & 0.766 $\pm$ 0.059 & +0.0298 & 4/5 & 0.2814 & 0.1250 & 5 \\
+Tip-Adapter-F+SAM & slice & 0.736 $\pm$ 0.058 & 0.763 $\pm$ 0.059 & +0.0266 & 4/5 & 0.3586 & 0.1875 & 25 \\
+CLIP-Adapter & patient & 0.738 $\pm$ 0.183 & 0.800 $\pm$ 0.117 & +0.0625 & 3/5 & 0.4172 & 0.2500 & 25 \\
+CoOp & patient & 0.772 $\pm$ 0.108 & 0.807 $\pm$ 0.120 & +0.0350 & 4/5 & 0.2876 & 0.1250 & 25 \\
+Nearest Centroid & patient & 0.787 $\pm$ 0.130 & 0.812 $\pm$ 0.140 & +0.0250 & 2/5 & 0.3992 & 0.5000 & 5 \\
+Proto-Adapter & patient & 0.787 $\pm$ 0.118 & 0.812 $\pm$ 0.128 & +0.0250 & 2/5 & 0.3992 & 0.5000 & 25 \\
+TaskRes & patient & 0.800 $\pm$ 0.110 & 0.825 $\pm$ 0.124 & +0.0250 & 2/5 & 0.3992 & 0.5000 & 25 \\
+TaskRes+SAM & patient & 0.800 $\pm$ 0.110 & 0.825 $\pm$ 0.124 & +0.0250 & 2/5 & 0.3992 & 0.5000 & 25 \\
+Tip-Adapter & patient & 0.800 $\pm$ 0.120 & 0.825 $\pm$ 0.135 & +0.0250 & 2/5 & 0.3992 & 0.5000 & 5 \\
+Tip-Adapter-F & patient & 0.800 $\pm$ 0.110 & 0.825 $\pm$ 0.124 & +0.0250 & 2/5 & 0.3992 & 0.5000 & 25 \\
+Zero-Shot & patient & 0.800 $\pm$ 0.120 & 0.825 $\pm$ 0.135 & +0.0250 & 2/5 & 0.3992 & 0.5000 & 5 \\
+Tip-Adapter-F+SAM & patient & 0.812 $\pm$ 0.107 & 0.825 $\pm$ 0.124 & +0.0125 & 1/5 & 0.5946 & 1.0000 & 25 \\
+\bottomrule
+\end{tabular}}
+\end{table}
